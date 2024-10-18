@@ -1,17 +1,8 @@
 import type { Metadata } from "next";
-import {Nunito_Sans} from "next/font/google";
+import { Nunito_Sans } from "next/font/google";
 import "./globals.css";
 
-const Nunito_Sans = Nunito_Sans({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+const nunitoSans = Nunito_Sans({subsets:["latin"]});
 
 export const metadata: Metadata = {
   title: "Lista de Paises",
@@ -25,10 +16,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt">
-      <body
-        className={nunitoSans.className}
-      >
-        {children}
+      <body className={nunitoSans.className}>
+        <main className="bg-gray-100 min-h-screen">
+          <nav className="w-full bg-white h-16 flex items-center justify-center">
+            <section className="container flex items-center gap-3">
+            <img  src="/logo.svg" alt="logo" width={48} height={48}/>
+            <h1 font-bold text-2xl>Lista de Paises</h1>              
+              
+            </section>
+          </nav>
+          {children}
+        </main>
+
       </body>
     </html>
   );
