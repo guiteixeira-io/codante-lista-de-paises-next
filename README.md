@@ -1,4 +1,4 @@
-# [🌍 Lista de Países usando Next.js]
+# 🌍 Lista de Países usando Next.js
 
 ![image](https://github.com/codante-io/mp-lista-de-paises-next/assets/6475893/5f35397c-f71e-4319-90b1-2ba970600a88)
 
